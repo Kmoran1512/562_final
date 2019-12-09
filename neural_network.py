@@ -33,7 +33,7 @@ def create_neural_network():
     model.add(Dense(26, input_dim=13, activation='relu'))
     model.add(Dense(13, activation='relu'))
     model.add(Dense(1, activation='sigmoid'))
-    model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
+    model.compile(loss='mean_squared_error', optimizer='adam', metrics=['accuracy'])
     return model
 
 estimators = []
